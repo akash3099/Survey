@@ -1,326 +1,289 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6b0001; -webkit-text-stroke: #6b0001}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #dc0005; -webkit-text-stroke: #dc0005}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #0000ff; -webkit-text-stroke: #0000ff}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000; min-height: 16.0px}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #093c94; -webkit-text-stroke: #093c94}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #654c1d; -webkit-text-stroke: #654c1d}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #137646; -webkit-text-stroke: #137646}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #9d00d2; -webkit-text-stroke: #9d00d2}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #00006d; -webkit-text-stroke: #00006d}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #900112; -webkit-text-stroke: #900112}
-    span.s1 {font-kerning: none; background-color: #ffffff}
-    span.s2 {font-kerning: none; color: #000000; background-color: #ffffff; -webkit-text-stroke: 0px #000000}
-    span.s3 {font-kerning: none; color: #dc0005; background-color: #ffffff; -webkit-text-stroke: 0px #dc0005}
-    span.s4 {font-kerning: none; color: #6b0001; background-color: #ffffff; -webkit-text-stroke: 0px #6b0001}
-    span.s5 {font-kerning: none; color: #0000ff; background-color: #ffffff; -webkit-text-stroke: 0px #0000ff}
-    span.s6 {font-kerning: none}
-    span.s7 {font-kerning: none; color: #093c94; background-color: #ffffff; -webkit-text-stroke: 0px #093c94}
-    span.s8 {font-kerning: none; color: #137646; background-color: #ffffff; -webkit-text-stroke: 0px #137646}
-    span.s9 {font-kerning: none; color: #654c1d; background-color: #ffffff; -webkit-text-stroke: 0px #654c1d}
-    span.s10 {font-kerning: none; color: #900112; background-color: #ffffff; -webkit-text-stroke: 0px #900112}
-    span.s11 {font-kerning: none; color: #00006d; background-color: #ffffff; -webkit-text-stroke: 0px #00006d}
-    span.s12 {font-kerning: none; color: #9d00d2; background-color: #ffffff; -webkit-text-stroke: 0px #9d00d2}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dinner? ❤️</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: Georgia, serif;
+  background: linear-gradient(135deg, #fff1f5, #fff8ed);
+  color: #542b36;
+}
+
+.card {
+  width: 90%;
+  max-width: 440px;
+  padding: 42px 25px;
+  text-align: center;
+  background: rgba(255,255,255,0.9);
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(130,65,85,0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.emoji {
+  font-size: 50px;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  color: #7b3046;
+  margin: 18px 0 14px;
+}
+
+.subtitle {
+  font-family: Arial, sans-serif;
+  color: #805f67;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  border: none;
+  border-radius: 50px;
+  padding: 15px 27px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+#yes {
+  color: white;
+  background: linear-gradient(135deg, #e75480, #c92f61);
+  box-shadow: 0 10px 25px rgba(201,47,97,0.3);
+}
+
+#no {
+  color: #8b5362;
+  background: #f8e9ed;
+}
+
+.hint {
+  height: 25px;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #aa7b86;
+}
+
+.success {
+  display: none;
+}
+
+.big-heart {
+  font-size: 75px;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  color: #e75480;
+  opacity: 0.4;
+  pointer-events: none;
+  animation: rise 7s linear forwards;
+  z-index: 1;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.4;
+  }
+
+  to {
+    transform: translateY(-110vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.big-heart {
+  animation: pulse 1.2s infinite;
+}
+</style>
 </head>
+
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> </span><span class="s3">html</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p2"><span class="s4">&lt;meta</span><span class="s2"> </span><span class="s1">charset</span><span class="s2">=</span><span class="s5">"UTF-8"</span><span class="s4">&gt;</span></p>
-<p class="p3"><span class="s4">&lt;meta</span><span class="s2"> </span><span class="s3">name</span><span class="s2">=</span><span class="s1">"viewport"</span><span class="s2"> </span><span class="s3">content</span><span class="s2">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s4">&gt;</span></p>
-<p class="p1"><span class="s1">&lt;title&gt;</span><span class="s2">Dinner? ❤️</span><span class="s1">&lt;/title&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">&lt;style&gt;</span></p>
-<p class="p5"><span class="s4">*</span><span class="s1"> {</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">box-sizing</span><span class="s2">: </span><span class="s7">border-box</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">body</span><span class="s2"> {</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">margin</span><span class="s2">: </span><span class="s8">0</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">min-height</span><span class="s2">: </span><span class="s8">100vh</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">display</span><span class="s2">: </span><span class="s7">flex</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">align-items</span><span class="s2">: </span><span class="s7">center</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">justify-content</span><span class="s2">: </span><span class="s7">center</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">overflow</span><span class="s2">: </span><span class="s7">hidden</span><span class="s2">;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">font-family</span><span class="s2">: </span><span class="s1">Georgia</span><span class="s2">, </span><span class="s1">serif</span><span class="s2">;</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">background</span><span class="s2">: </span><span class="s1">linear-gradient</span><span class="s2">(</span><span class="s8">135deg</span><span class="s2">, </span><span class="s7">#fff1f5</span><span class="s2">, </span><span class="s7">#fff8ed</span><span class="s2">);</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">color</span><span class="s2">: </span><span class="s1">#542b36</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">.card</span><span class="s2"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s3">width</span><span class="s1">: </span><span class="s8">90%</span><span class="s1">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">max-width</span><span class="s2">: </span><span class="s8">440px</span><span class="s2">;</span></p>
-<p class="p8"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">padding</span><span class="s2">: </span><span class="s1">42px</span><span class="s2"> </span><span class="s1">25px</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">text-align</span><span class="s2">: </span><span class="s7">center</span><span class="s2">;</span></p>
-<p class="p8"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">background</span><span class="s2">: </span><span class="s9">rgba</span><span class="s2">(</span><span class="s1">255</span><span class="s2">,</span><span class="s1">255</span><span class="s2">,</span><span class="s1">255</span><span class="s2">,</span><span class="s1">0.9</span><span class="s2">);</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">border-radius</span><span class="s2">: </span><span class="s8">30px</span><span class="s2">;</span></p>
-<p class="p8"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">box-shadow</span><span class="s2">: </span><span class="s1">0</span><span class="s2"> </span><span class="s1">20px</span><span class="s2"> </span><span class="s1">60px</span><span class="s2"> </span><span class="s9">rgba</span><span class="s2">(</span><span class="s1">130</span><span class="s2">,</span><span class="s1">65</span><span class="s2">,</span><span class="s1">85</span><span class="s2">,</span><span class="s1">0.2</span><span class="s2">);</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">position</span><span class="s2">: </span><span class="s7">relative</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">z-index</span><span class="s2">: </span><span class="s8">2</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">.emoji</span><span class="s2"> {</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">font-size</span><span class="s2">: </span><span class="s8">50px</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p5"><span class="s4">h1</span><span class="s1"> {</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">font-size</span><span class="s2">: </span><span class="s8">32px</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">line-height</span><span class="s2">: </span><span class="s8">1.2</span><span class="s2">;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">color</span><span class="s2">: </span><span class="s1">#7b3046</span><span class="s2">;</span></p>
-<p class="p8"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">margin</span><span class="s2">: </span><span class="s1">18px</span><span class="s2"> </span><span class="s1">0</span><span class="s2"> </span><span class="s1">14px</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">.subtitle</span><span class="s2"> {</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">font-family</span><span class="s2">: </span><span class="s1">Arial</span><span class="s2">, </span><span class="s1">sans-serif</span><span class="s2">;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">color</span><span class="s2">: </span><span class="s1">#805f67</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">line-height</span><span class="s2">: </span><span class="s8">1.6</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">margin-bottom</span><span class="s2">: </span><span class="s8">30px</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">.buttons</span><span class="s2"> {</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">min-height</span><span class="s2">: </span><span class="s8">120px</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">display</span><span class="s2">: </span><span class="s7">flex</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">align-items</span><span class="s2">: </span><span class="s7">center</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">justify-content</span><span class="s2">: </span><span class="s7">center</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s3">gap</span><span class="s1">: </span><span class="s8">15px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">button</span><span class="s2"> {</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">border</span><span class="s2">: </span><span class="s7">none</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">border-radius</span><span class="s2">: </span><span class="s8">50px</span><span class="s2">;</span></p>
-<p class="p8"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">padding</span><span class="s2">: </span><span class="s1">15px</span><span class="s2"> </span><span class="s1">27px</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">font-size</span><span class="s2">: </span><span class="s8">17px</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">font-weight</span><span class="s2">: </span><span class="s7">bold</span><span class="s2">;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">cursor</span><span class="s2">: </span><span class="s1">pointer</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s3">transition</span><span class="s1">: transform </span><span class="s8">0.4s</span><span class="s1"> </span><span class="s7">ease</span><span class="s1">, opacity </span><span class="s8">0.4s</span><span class="s1"> </span><span class="s7">ease</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">#yes</span><span class="s2"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s3">color</span><span class="s1">: </span><span class="s7">white</span><span class="s1">;</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">background</span><span class="s2">: </span><span class="s1">linear-gradient</span><span class="s2">(</span><span class="s8">135deg</span><span class="s2">, </span><span class="s7">#e75480</span><span class="s2">, </span><span class="s7">#c92f61</span><span class="s2">);</span></p>
-<p class="p8"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">box-shadow</span><span class="s2">: </span><span class="s1">0</span><span class="s2"> </span><span class="s1">10px</span><span class="s2"> </span><span class="s1">25px</span><span class="s2"> </span><span class="s9">rgba</span><span class="s2">(</span><span class="s1">201</span><span class="s2">,</span><span class="s1">47</span><span class="s2">,</span><span class="s1">97</span><span class="s2">,</span><span class="s1">0.3</span><span class="s2">);</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">#no</span><span class="s2"> {</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">color</span><span class="s2">: </span><span class="s1">#8b5362</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">background</span><span class="s2">: </span><span class="s7">#f8e9ed</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">.hint</span><span class="s2"> {</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">height</span><span class="s2">: </span><span class="s8">25px</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">margin-top</span><span class="s2">: </span><span class="s8">15px</span><span class="s2">;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">font-family</span><span class="s2">: </span><span class="s1">Arial</span><span class="s2">, </span><span class="s1">sans-serif</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">font-size</span><span class="s2">: </span><span class="s8">13px</span><span class="s2">;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">color</span><span class="s2">: </span><span class="s1">#aa7b86</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">.success</span><span class="s2"> {</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">display</span><span class="s2">: </span><span class="s7">none</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">.big-heart</span><span class="s2"> {</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">font-size</span><span class="s2">: </span><span class="s8">75px</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">.heart</span><span class="s2"> {</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">position</span><span class="s2">: </span><span class="s7">fixed</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">bottom</span><span class="s2">: </span><span class="s8">-30px</span><span class="s2">;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">color</span><span class="s2">: </span><span class="s1">#e75480</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">opacity</span><span class="s2">: </span><span class="s8">0.4</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">pointer-events</span><span class="s2">: </span><span class="s7">none</span><span class="s2">;</span></p>
-<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">animation</span><span class="s2">: rise </span><span class="s8">7s</span><span class="s2"> </span><span class="s1">linear</span><span class="s2"> </span><span class="s1">forwards</span><span class="s2">;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">z-index</span><span class="s2">: </span><span class="s8">1</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p9"><span class="s1">@keyframes</span><span class="s2"> </span><span class="s3">rise</span><span class="s2"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>from {</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">transform</span><span class="s2">: </span><span class="s1">translateY</span><span class="s2">(</span><span class="s8">0</span><span class="s2">) </span><span class="s1">rotate</span><span class="s2">(</span><span class="s8">0deg</span><span class="s2">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">opacity</span><span class="s1">: </span><span class="s8">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>15% {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">opacity</span><span class="s1">: </span><span class="s8">0.4</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>to {</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">transform</span><span class="s2">: </span><span class="s1">translateY</span><span class="s2">(</span><span class="s8">-110vh</span><span class="s2">) </span><span class="s1">rotate</span><span class="s2">(</span><span class="s8">35deg</span><span class="s2">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">opacity</span><span class="s1">: </span><span class="s8">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p9"><span class="s1">@keyframes</span><span class="s2"> </span><span class="s3">pulse</span><span class="s2"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>0%, 100% {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">transform</span><span class="s1">: </span><span class="s9">scale</span><span class="s1">(</span><span class="s8">1</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>50% {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">transform</span><span class="s1">: </span><span class="s9">scale</span><span class="s1">(</span><span class="s8">1.15</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">.big-heart</span><span class="s2"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s3">animation</span><span class="s1">: pulse </span><span class="s8">1.2s</span><span class="s1"> </span><span class="s7">infinite</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p3"><span class="s4">&lt;div</span><span class="s2"> </span><span class="s3">class</span><span class="s2">=</span><span class="s1">"card"</span><span class="s2"> </span><span class="s3">id</span><span class="s2">=</span><span class="s1">"questionCard"</span><span class="s4">&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;div</span><span class="s2"> </span><span class="s3">class</span><span class="s2">=</span><span class="s5">"emoji"</span><span class="s1">&gt;</span><span class="s2">🍷✨</span><span class="s1">&lt;/div&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;h1&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>Will you go to Dinner with Akash tonight?</span></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/h1&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s4">&lt;p</span><span class="s2"> </span><span class="s3">class</span><span class="s2">=</span><span class="s1">"subtitle"</span><span class="s4">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>Just a little dinner, some good food,</span><span class="s4">&lt;br&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>and hopefully some lovely company. ❤️</span></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/p&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s4">&lt;div</span><span class="s2"> </span><span class="s3">class</span><span class="s2">=</span><span class="s1">"buttons"</span><span class="s4">&gt;</span></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;button</span><span class="s2"> </span><span class="s3">id</span><span class="s2">=</span><span class="s5">"yes"</span><span class="s1">&gt;</span><span class="s2">Yes ❤️</span><span class="s1">&lt;/button&gt;</span></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;button</span><span class="s2"> </span><span class="s3">id</span><span class="s2">=</span><span class="s5">"no"</span><span class="s1">&gt;</span><span class="s2">No 🙈</span><span class="s1">&lt;/button&gt;</span></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/div&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s4">&lt;div</span><span class="s2"> </span><span class="s3">class</span><span class="s2">=</span><span class="s1">"hint"</span><span class="s2"> </span><span class="s3">id</span><span class="s2">=</span><span class="s1">"hint"</span><span class="s4">&gt;&lt;/div&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p3"><span class="s4">&lt;div</span><span class="s2"> </span><span class="s3">class</span><span class="s2">=</span><span class="s1">"card success"</span><span class="s2"> </span><span class="s3">id</span><span class="s2">=</span><span class="s1">"successCard"</span><span class="s4">&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s4">&lt;div</span><span class="s2"> </span><span class="s3">class</span><span class="s2">=</span><span class="s1">"big-heart"</span><span class="s4">&gt;</span><span class="s2">💖</span><span class="s4">&lt;/div&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s4">&lt;h1&gt;</span><span class="s1">Yay! dinner tonight! 🥰</span><span class="s4">&lt;/h1&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s4">&lt;p</span><span class="s2"> </span><span class="s3">class</span><span class="s2">=</span><span class="s1">"subtitle"</span><span class="s4">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>Akash is officially very happy right now. ❤️</span></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;br&gt;&lt;br&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>See you tonight! ✨🍷</span></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/p&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">&lt;script&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s5">var</span><span class="s2"> </span><span class="s1">yesButton</span><span class="s2"> = </span><span class="s1">document</span><span class="s2">.</span><span class="s9">getElementById</span><span class="s2">(</span><span class="s10">"yes"</span><span class="s2">);</span></p>
-<p class="p10"><span class="s5">var</span><span class="s2"> </span><span class="s1">noButton</span><span class="s2"> = </span><span class="s1">document</span><span class="s2">.</span><span class="s9">getElementById</span><span class="s2">(</span><span class="s10">"no"</span><span class="s2">);</span></p>
-<p class="p7"><span class="s5">var</span><span class="s2"> </span><span class="s11">hint</span><span class="s2"> = </span><span class="s11">document</span><span class="s2">.</span><span class="s1">getElementById</span><span class="s2">(</span><span class="s10">"hint"</span><span class="s2">);</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s5">var</span><span class="s2"> </span><span class="s1">questionCard</span><span class="s2"> = </span><span class="s1">document</span><span class="s2">.</span><span class="s9">getElementById</span><span class="s2">(</span><span class="s10">"questionCard"</span><span class="s2">);</span></p>
-<p class="p10"><span class="s5">var</span><span class="s2"> </span><span class="s1">successCard</span><span class="s2"> = </span><span class="s1">document</span><span class="s2">.</span><span class="s9">getElementById</span><span class="s2">(</span><span class="s10">"successCard"</span><span class="s2">);</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s5">var</span><span class="s2"> </span><span class="s1">noClicks</span><span class="s2"> = </span><span class="s8">0</span><span class="s2">;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s5">var</span><span class="s2"> </span><span class="s1">messages</span><span class="s2"> = [</span></p>
-<p class="p11"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">"Are you sure? 🥺"</span><span class="s2">,</span></p>
-<p class="p11"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">"Really sure? 🙈"</span><span class="s2">,</span></p>
-<p class="p11"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">"Think about the dinner... 🍝"</span><span class="s2">,</span></p>
-<p class="p11"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">"I'll be very sad... 🥹"</span><span class="s2">,</span></p>
-<p class="p11"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">"One tiny dinner? ❤️"</span><span class="s2">,</span></p>
-<p class="p11"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">"Pretty please? 🥺💕"</span><span class="s2">,</span></p>
-<p class="p11"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">"The No button is getting shy now..."</span><span class="s2">,</span></p>
-<p class="p11"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">"Okay... you know what to do 😌❤️"</span></p>
-<p class="p5"><span class="s1">];</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p7"><span class="s11">noButton</span><span class="s2">.</span><span class="s1">addEventListener</span><span class="s2">(</span><span class="s10">"click"</span><span class="s2">, </span><span class="s5">function</span><span class="s2">() {</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">noClicks</span><span class="s2">++;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s5">var</span><span class="s2"> </span><span class="s1">noScale</span><span class="s2"> = </span><span class="s1">Math</span><span class="s2">.</span><span class="s9">max</span><span class="s2">(</span><span class="s8">0.12</span><span class="s2">, </span><span class="s8">1</span><span class="s2"> - </span><span class="s1">noClicks</span><span class="s2"> * </span><span class="s8">0.13</span><span class="s2">);</span></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s5">var</span><span class="s2"> </span><span class="s1">yesScale</span><span class="s2"> = </span><span class="s1">Math</span><span class="s2">.</span><span class="s9">min</span><span class="s2">(</span><span class="s8">2.4</span><span class="s2">, </span><span class="s8">1</span><span class="s2"> + </span><span class="s1">noClicks</span><span class="s2"> * </span><span class="s8">0.16</span><span class="s2">);</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">noButton</span><span class="s2">.</span><span class="s1">style</span><span class="s2">.</span><span class="s1">transform</span><span class="s2"> = </span><span class="s10">"scale("</span><span class="s2"> + </span><span class="s1">noScale</span><span class="s2"> + </span><span class="s10">")"</span><span class="s2">;</span></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">yesButton</span><span class="s2">.</span><span class="s1">style</span><span class="s2">.</span><span class="s1">transform</span><span class="s2"> = </span><span class="s10">"scale("</span><span class="s2"> + </span><span class="s1">yesScale</span><span class="s2"> + </span><span class="s10">")"</span><span class="s2">;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">noButton</span><span class="s2">.</span><span class="s1">style</span><span class="s2">.</span><span class="s1">opacity</span><span class="s2"> = </span><span class="s1">Math</span><span class="s2">.</span><span class="s9">max</span><span class="s2">(</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s8">0.25</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s8">1</span><span class="s1"> - </span><span class="s11">noClicks</span><span class="s1"> * </span><span class="s8">0.1</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>);</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s5">var</span><span class="s2"> </span><span class="s1">messageIndex</span><span class="s2"> = </span><span class="s1">Math</span><span class="s2">.</span><span class="s9">min</span><span class="s2">(</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s11">noClicks</span><span class="s1"> - </span><span class="s8">1</span><span class="s1">,</span></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">messages</span><span class="s2">.</span><span class="s1">length</span><span class="s2"> - </span><span class="s8">1</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>);</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">hint</span><span class="s2">.</span><span class="s1">textContent</span><span class="s2"> = </span><span class="s1">messages</span><span class="s2">[</span><span class="s1">messageIndex</span><span class="s2">];</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p5"><span class="s1">});</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p7"><span class="s11">yesButton</span><span class="s2">.</span><span class="s1">addEventListener</span><span class="s2">(</span><span class="s10">"click"</span><span class="s2">, </span><span class="s5">function</span><span class="s2">() {</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">questionCard</span><span class="s2">.</span><span class="s1">style</span><span class="s2">.</span><span class="s1">display</span><span class="s2"> = </span><span class="s10">"none"</span><span class="s2">;</span></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">successCard</span><span class="s2">.</span><span class="s1">style</span><span class="s2">.</span><span class="s1">display</span><span class="s2"> = </span><span class="s10">"block"</span><span class="s2">;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">createHearts</span><span class="s2">(</span><span class="s8">25</span><span class="s2">);</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p5"><span class="s1">});</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p7"><span class="s5">function</span><span class="s2"> </span><span class="s1">createHeart</span><span class="s2">() {</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s5">var</span><span class="s2"> </span><span class="s1">heart</span><span class="s2"> = </span><span class="s1">document</span><span class="s2">.</span><span class="s9">createElement</span><span class="s2">(</span><span class="s10">"div"</span><span class="s2">);</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">heart</span><span class="s2">.</span><span class="s1">className</span><span class="s2"> = </span><span class="s10">"heart"</span><span class="s2">;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s12">if</span><span class="s1"> (</span><span class="s11">Math</span><span class="s1">.</span><span class="s9">random</span><span class="s1">() &gt; </span><span class="s8">0.5</span><span class="s1">) {</span></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">heart</span><span class="s2">.</span><span class="s1">textContent</span><span class="s2"> = </span><span class="s10">"♥️"</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>} </span><span class="s12">else</span><span class="s1"> {</span></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">heart</span><span class="s2">.</span><span class="s1">textContent</span><span class="s2"> = </span><span class="s10">"♡"</span><span class="s2">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">heart</span><span class="s2">.</span><span class="s1">style</span><span class="s2">.</span><span class="s1">left</span><span class="s2"> = </span><span class="s1">Math</span><span class="s2">.</span><span class="s9">random</span><span class="s2">() * </span><span class="s8">100</span><span class="s2"> + </span><span class="s10">"vw"</span><span class="s2">;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">heart</span><span class="s2">.</span><span class="s1">style</span><span class="s2">.</span><span class="s1">fontSize</span><span class="s2"> =</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>(</span><span class="s8">14</span><span class="s1"> + </span><span class="s11">Math</span><span class="s1">.</span><span class="s9">random</span><span class="s1">() * </span><span class="s8">24</span><span class="s1">) + </span><span class="s10">"px"</span><span class="s1">;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">heart</span><span class="s2">.</span><span class="s1">style</span><span class="s2">.</span><span class="s1">animationDuration</span><span class="s2"> =</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>(</span><span class="s8">5</span><span class="s1"> + </span><span class="s11">Math</span><span class="s1">.</span><span class="s9">random</span><span class="s1">() * </span><span class="s8">6</span><span class="s1">) + </span><span class="s10">"s"</span><span class="s1">;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p10"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">document</span><span class="s2">.</span><span class="s1">body</span><span class="s2">.</span><span class="s9">appendChild</span><span class="s2">(</span><span class="s1">heart</span><span class="s2">);</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">setTimeout</span><span class="s2">(</span><span class="s5">function</span><span class="s2">() {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s11">heart</span><span class="s1">.</span><span class="s9">remove</span><span class="s1">();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>}, </span><span class="s8">12000</span><span class="s1">);</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p7"><span class="s5">function</span><span class="s2"> </span><span class="s1">createHearts</span><span class="s2">(</span><span class="s11">amount</span><span class="s2">) {</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s12">for</span><span class="s1"> (</span><span class="s5">var</span><span class="s1"> </span><span class="s11">i</span><span class="s1"> = </span><span class="s8">0</span><span class="s1">; </span><span class="s11">i</span><span class="s1"> &lt; </span><span class="s11">amount</span><span class="s1">; </span><span class="s11">i</span><span class="s1">++) {</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">setTimeout</span><span class="s2">(</span><span class="s5">function</span><span class="s2">() {</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">createHeart</span><span class="s2">();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>}, </span><span class="s11">i</span><span class="s1"> * </span><span class="s8">120</span><span class="s1">);</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p5"><span class="s1">}</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p7"><span class="s1">setInterval</span><span class="s2">(</span><span class="s5">function</span><span class="s2">() {</span></p>
-<p class="p7"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">createHeart</span><span class="s2">();</span></p>
-<p class="p5"><span class="s1">}, </span><span class="s8">900</span><span class="s1">);</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
-<p class="p4"><span class="s6"></span><br></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+
+<div class="card" id="questionCard">
+
+  <div class="emoji">🍷✨</div>
+
+  <h1>
+    Will you go to Dinner with Akash tonight?
+  </h1>
+
+  <p class="subtitle">
+    Just a little dinner, some good food,<br>
+    and hopefully some lovely company. ❤️
+  </p>
+
+  <div class="buttons">
+    <button id="yes">Yes ❤️</button>
+    <button id="no">No 🙈</button>
+  </div>
+
+  <div class="hint" id="hint"></div>
+
+</div>
+
+
+<div class="card success" id="successCard">
+
+  <div class="big-heart">💖</div>
+
+  <h1>Yay! dinner tonight! 🥰</h1>
+
+  <p class="subtitle">
+    Akash is officially very happy right now. ❤️
+    <br><br>
+    See you tonight! ✨🍷
+  </p>
+
+</div>
+
+
+<script>
+
+var yesButton = document.getElementById("yes");
+var noButton = document.getElementById("no");
+var hint = document.getElementById("hint");
+
+var questionCard = document.getElementById("questionCard");
+var successCard = document.getElementById("successCard");
+
+var noClicks = 0;
+
+var messages = [
+  "Are you sure? 🥺",
+  "Really sure? 🙈",
+  "Think about the dinner... 🍝",
+  "I'll be very sad... 🥹",
+  "One tiny dinner? ❤️",
+  "Pretty please? 🥺💕",
+  "The No button is getting shy now...",
+  "Okay... you know what to do 😌❤️"
+];
+
+
+noButton.addEventListener("click", function() {
+
+  noClicks++;
+
+  var noScale = Math.max(0.12, 1 - noClicks * 0.13);
+  var yesScale = Math.min(2.4, 1 + noClicks * 0.16);
+
+  noButton.style.transform = "scale(" + noScale + ")";
+  yesButton.style.transform = "scale(" + yesScale + ")";
+
+  noButton.style.opacity = Math.max(
+    0.25,
+    1 - noClicks * 0.1
+  );
+
+  var messageIndex = Math.min(
+    noClicks - 1,
+    messages.length - 1
+  );
+
+  hint.textContent = messages[messageIndex];
+
+});
+
+
+yesButton.addEventListener("click", function() {
+
+  questionCard.style.display = "none";
+  successCard.style.display = "block";
+
+  createHearts(25);
+
+});
+
+
+function createHeart() {
+
+  var heart = document.createElement("div");
+
+  heart.className = "heart";
+
+  if (Math.random() > 0.5) {
+    heart.textContent = "♥️";
+  } else {
+    heart.textContent = "♡";
+  }
+
+  heart.style.left = Math.random() * 100 + "vw";
+
+  heart.style.fontSize =
+    (14 + Math.random() * 24) + "px";
+
+  heart.style.animationDuration =
+    (5 + Math.random() * 6) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(function() {
+    heart.remove();
+  }, 12000);
+
+}
+
+
+function createHearts(amount) {
+
+  for (var i = 0; i < amount; i++) {
+
+    setTimeout(function() {
+      createHeart();
+    }, i * 120);
+
+  }
+
+}
+
+
+setInterval(function() {
+  createHeart();
+}, 900);
+
+</script>
+
 </body>
 </html>
